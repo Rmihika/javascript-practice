@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+    <title>Date and Greeting using PyScript</title> 
+
+ 
+
+    <!-- PyScript CSS & JS --> 
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.2/core.css"> 
+
+    <script type="module" src="https://pyscript.net/releases/2025.11.2/core.js"></script> 
+
+</head> 
+
+ 
+
+<body> 
+
+ 
+
+<h2 id="greeting"></h2> 
+
+<p id="date"></p> 
+
+<script type="py"> 
+
+from datetime import datetime 
+
+from js import document 
+
+ 
+
+now = datetime.now() 
+
+ 
+
+today_date = now.strftime("%d-%m-%Y") 
+
+hour = now.hour 
+
+ 
+
+if hour < 12: 
+
+    greeting = "Good Morning" 
+
+elif hour < 16: 
+
+    greeting = "Good Afternoon" 
+
+elif hour < 20: 
+
+    greeting = "Good Evening" 
+
+else: 
+
+    greeting = "Good Night" 
+
+ 
+
+document.getElementById("greeting").innerHTML = greeting 
+
+document.getElementById("date").innerHTML = "Today's Date: " + today_date 
+
+</script> 
+
+ 
+
+</body> 
+
+</html>

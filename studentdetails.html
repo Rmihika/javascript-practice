@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+    <title>Multiple Student Details - PyScript</title> 
+
+ 
+
+    <!-- PyScript 2025 --> 
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.2/core.css"> 
+
+    <script type="module" src="https://pyscript.net/releases/2025.11.2/core.js"></script> 
+
+</head> 
+
+ 
+
+<body> 
+
+ 
+
+    <h2>Student Details</h2> 
+
+ 
+
+    <div id="output"></div> 
+
+ 
+
+    <script type="py"> 
+
+from js import document 
+
+ 
+
+# list of student dictionaries 
+
+students = [ 
+
+    {"name": "mihika", "roll": 1, "course": "Computer Engineering"}, 
+
+    {"name": "riya", "roll": 2, "course": "Information Technology"}, 
+
+    {"name": "tina", "roll": 3, "course": "Electronics"} 
+
+] 
+
+ 
+
+html = "" 
+
+ 
+
+for student in students: 
+
+   html += f""" 
+
+<b>Name:</b> {student['name']} <br> 
+
+<b>Roll No:</b> {student['roll']} <br> 
+
+<b>Course:</b> {student['course']} <br><hr>""" 
+
+ 
+
+document.getElementById("output").innerHTML = html 
+
+ 
+
+ 
+
+    </script> 
+
+ 
+
+</body> 
+
+</html>
