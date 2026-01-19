@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student registration form </title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+
+    
+
+    <form onsubmit="return validateForm()">
+    
+        FirstName:
+        <input type="text" id="FirstName"><br><br>
+        LastName:
+        <input type="text" id="LastName"><br><br>
+        Age:
+        <input type="text" id="Age"><br><br>
+        Email:
+        <input type="text" id="Email"><br><br>
+        RollNo:
+        <input type="text" id="RollNo"><br><br>
+        Course:
+        <input type="text" id="Course"><br><br>
+
+        <input type="submit" value="Register">
+
+    
+    </form>
+
+    <div id="result"></div>
+
+<script>
+    function validateForm() {
+        var fname=document.getElementById("FirstName").value;
+        var lname=document.getElementById("LastName").value;
+        var age=document.getElementById("Age").value;
+        var eml=document.getElementById("Email").value;
+        var roll=document.getElementById("RollNo").value;
+        var crs=document.getElementById("Course").value;
+        
+        document.getElementById("result").innerHTML=
+        "<h3>Student Details</h3>" +
+        "FirstName :" + fname + "<br>" +
+        "LastName :" + lname + "<br>" +
+        "Age :" + age + "<br>" +
+        "Email :" + eml + "<br>" +
+        "RollNo :" + roll + "<br>" +
+        "Course :" + crs ;
+        
+        return false;
+
+    }
+</script>
+</body>
+</html>
